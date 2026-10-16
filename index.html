@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>김민식 ♥ 서진경 결혼합니다 | WORLD TOUR FINALE</title>
+
+  <!-- 카카오톡 공유 미리보기 (오픈그래프) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="[탑승권 도착] 김민식 ♥ 서진경 결혼식에 초대합니다 ✈️" />
+  <meta property="og:description" content="1년간의 세계여행을 마치고, 2027.03.27(토) 오후 2:30 마곡 더 베뉴지 마리아칼라스홀에 착륙합니다." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 네이버 지도 API (YOUR_NCP_CLIENT_ID 자리에 본인 클라이언트 ID 입력 시 실제 지도 활성화) -->
+  <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_NCP_CLIENT_ID"></script>
+
+  <style>
+    /* 기본 테마: 화사한 스프링 블러쉬 코랄 (신부측 선호 밝은 톤) */
+    :root {
+      --outer-bg: #fdf2ee;
+      --bg-color: #fff9f6;
+      --card-bg: #ffffff;
+      --ink-dark: #3d3135;
+      --ink-mid: #6e5d63;
+      --ink-light: #a39197;
+      --accent-main: #ff6b8b;
+      --accent-main-dark: #f43f68;
+      --accent-soft: #ffeef2;
+      --accent-sub: #38bdf8;
+      --accent-coral: #ff5c7c;
+      --header-grad: linear-gradient(135deg, #ff8da6 0%, #ff6b8b 50%, #ff9a76 100%);
+      --ticker-bg: #ffe4ea;
+      --ticker-text: #d6335c;
+      --line-gray: #f5e4e8;
+      --box-soft: #fff5f7;
+      --ticket-radius: 22px;
+    }
+
+    /* 테마 2: 산뜻하고 맑은 파스텔 스카이 (상단 버튼으로 즉시 전환 가능) */
+    body.theme-sky {
+      --outer-bg: #eef7ff;
+      --bg-color: #f7fbff;
+      --card-bg: #ffffff;
+      --ink-dark: #2c3e50;
+      --ink-mid: #596e85;
+      --ink-light: #94a7bd;
+      --accent-main: #3898ff;
+      --accent-main-dark: #1d7be8;
+      --accent-soft: #e6f3ff;
+      --accent-sub: #ff7597;
+      --accent-coral: #ff6b8b;
+      --header-grad: linear-gradient(135deg, #60b6ff 0%, #3898ff 55%, #7cc4ff 100%);
+      --ticker-bg: #e1f1ff;
+      --ticker-text: #1565c0;
+      --line-gray: #e1eefc;
+      --box-soft: #f2f8ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--outer-bg);
+      color: var(--ink-dark);
+      font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      transition: background-color 0.3s ease;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 440px;
+      background-color: var(--bg-color);
+      min-height: 100vh;
+      box-shadow: 0 12px 40px rgba(255, 107, 139, 0.1);
+      overflow-x: hidden;
+      position: relative;
+      padding-bottom: 60px;
+      transition: background-color 0.3s ease;
+    }
+
+    .eng-font {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    /* 상단 티켓 배너 (밝은 파스텔 톤) */
+    .top-ticker {
+      background: var(--ticker-bg);
+      color: var(--ticker-text);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 9px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .top-ticker .live-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #ff4772;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: blink 1.4s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .theme-toggle-btn {
+      background: #ffffff;
+      color: var(--ink-dark);
+      border: 1px solid var(--line-gray);
+      padding: 3px 9px;
+      border-radius: 99px;
+      font-size: 10.5px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    /* 섹션 공통 카드 (화사한 화이트 보딩패스 스타일) */
+    .section-card {
+      background: var(--card-bg);
+      margin: 18px 16px;
+      border-radius: var(--ticket-radius);
+      box-shadow: 0 8px 26px rgba(220, 150, 165, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .section-header {
+      padding: 26px 22px 12px;
+      text-align: center;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-main);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      letter-spacing: 0.06em;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink-dark);
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--ink-light);
+      margin-top: 4px;
+    }
+
+    /* 티켓 절취선 효과 */
+    .ticket-divider {
+      position: relative;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 6px 0;
+    }
+    .ticket-divider::before,
+    .ticket-divider::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-color: var(--bg-color);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.03);
+    }
+    .ticket-divider::before { left: -12px; }
+    .ticket-divider::after { right: -12px; }
+    .ticket-dashed-line {
+      width: calc(100% - 36px);
+      border-top: 2px dashed var(--line-gray);
+    }
+
+    /* 1. 메인 보딩패스 히어로 (화사한 그라데이션) */
+    .boarding-header {
+      background: var(--header-grad);
+      color: #ffffff;
+      padding: 20px 22px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .boarding-header .airline {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .boarding-header .class-badge {
+      background: rgba(255, 255, 255, 0.28);
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+
+    .route-box {
+      padding: 22px 22px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+    }
+    .airport-code {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--ink-dark);
+      line-height: 1.1;
+    }
+    .airport-label {
+      font-size: 11px;
+      color: var(--ink-light);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .flight-graphic {
+      flex: 1;
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+    }
+    .flight-graphic .plane-icon {
+      font-size: 22px;
+      display: inline-block;
+      transform: rotate(10deg);
+    }
+    .flight-graphic .duration-pill {
+      display: block;
+      font-size: 10px;
+      color: var(--accent-main);
+      font-weight: 700;
+      background: var(--accent-soft);
+      border-radius: 99px;
+      padding: 3px 8px;
+      margin-top: 2px;
+    }
+
+    .hero-photo-wrap {
+      padding: 0 20px;
+      position: relative;
+    }
+    .hero-photo {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+      background: var(--box-soft);
+      filter: brightness(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+    .stamp-badge {
+      position: absolute;
+      bottom: -14px;
+      right: 32px;
+      background: #ffffff;
+      border: 2px solid var(--accent-coral);
+      color: var(--accent-coral);
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 11px;
+      transform: rotate(-7deg);
+      box-shadow: 0 4px 14px rgba(255, 92, 124, 0.22);
+      letter-spacing: 0.05em;
+    }
+
+    .ticket-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      padding: 26px 22px 16px;
+    }
+    .meta-item .label {
+      font-size: 10px;
+      color: var(--ink-light);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .meta-item .value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-dark);
+      margin-top: 2px;
+    }
+
+    /* 바코드도 어두운 검정 대신 부드러운 로즈브라운/그레이로 톤업 */
+    .barcode-strip {
+      padding: 12px 22px 22px;
+      text-align: center;
+    }
+    .barcode-lines {
+      height: 38px;
+      background: repeating-linear-gradient(
+        90deg,
+        #8c7a80 0px,
+        #8c7a80 3px,
+        transparent 3px,
+        transparent 6px,
+        #8c7a80 6px,
+        #8c7a80 7px,
+        transparent 7px,
+        transparent 11px,
+        #8c7a80 11px,
+        #8c7a80 15px,
+        transparent 15px,
+        transparent 18px
+      );
+      opacity: 0.55;
+      border-radius: 4px;
+    }
+    .barcode-num {
+      font-size: 10px;
+      color: var(--ink-light);
+      margin-top: 6px;
+      letter-spacing: 0.25em;
+    }
+
+    /* 2. 세계일주 스토리 & 초대글 */
+    .story-body {
+      padding: 12px 24px 28px;
+      text-align: center;
+    }
+    .world-stats {
+      display: flex;
+      justify-content: space-around;
+      background: var(--box-soft);
+      border: 1px solid var(--line-gray);
+      border-radius: 16px;
+      padding: 14px 10px;
+      margin: 12px 0 22px;
+    }
+    .stat-box .num {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--accent-main);
+    }
+    .stat-box .txt {
+      font-size: 11px;
+      color: var(--ink-mid);
+      margin-top: 2px;
+    }
+    .greeting-text {
+      font-size: 14.5px;
+      color: var(--ink-mid);
+      line-height: 1.88;
+      word-break: keep-all;
+    }
+    .greeting-highlight {
+      background: linear-gradient(transparent 55%, #ffe0eb 55%);
+      font-weight: 700;
+      color: var(--ink-dark);
+      padding: 0 2px;
+    }
+    .parents-box {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-gray);
+      font-size: 14px;
+      color: var(--ink-dark);
+      line-height: 1.9;
+    }
+    .parents-box .role {
+      color: var(--ink-light);
+      font-size: 12px;
+      margin: 0 4px;
+    }
+
+    /* 3. 달력 & 카운트다운 */
+    .calendar-wrap {
+      padding: 10px 24px 26px;
+    }
+    .cal-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    .cal-table th {
+      padding: 8px 0;
+      font-size: 11px;
+      color: var(--ink-light);
+      font-weight: 600;
+    }
+    .cal-table th:first-child,
+    .cal-table td.sun {
+      color: var(--accent-coral);
+    }
+    .cal-table td {
+      padding: 9px 0;
+      color: var(--ink-mid);
+      position: relative;
+    }
+    .cal-table td.wedding-day {
+      color: #fff;
+      font-weight: 800;
+    }
+    .cal-table td.wedding-day span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--accent-coral);
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(255, 92, 124, 0.4);
+    }
+
+    .dday-counter {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .dday-item {
+      background: var(--box-soft);
+      border: 1px solid var(--line-gray);
+      padding: 10px 4px;
+      border-radius: 14px;
+    }
+    .dday-item .val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent-main);
+    }
+    .dday-item .unit {
+      font-size: 10px;
+      color: var(--ink-light);
+      font-weight: 600;
+    }
+    .dday-msg {
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-mid);
+      margin-top: 14px;
+      font-weight: 500;
+    }
+
+    /* 4. 미니 게임 C (어두운 암막 오버레이를 밝고 화사한 화이트 글래스로 변경!) */
+    .game-container {
+      padding: 12px 20px 24px;
+      text-align: center;
+    }
+    .game-canvas-wrap {
+      position: relative;
+      background: linear-gradient(180deg, #fff0f5 0%, #e8f6ff 75%, #ffe4ec 75%, #ffd6e2 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--line-gray);
+      touch-action: manipulation;
+    }
+    canvas#runnerCanvas {
+      width: 100%;
+      height: 190px;
+      display: block;
+    }
+    .game-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(4px);
+      color: var(--ink-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 5;
+    }
+    .game-overlay.hidden {
+      display: none;
+    }
+    .game-overlay h4 {
+      font-size: 16px;
+      color: var(--ink-dark);
+      margin-bottom: 6px;
+    }
+    .game-overlay p {
+      font-size: 12px;
+      color: var(--ink-mid);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .btn-game {
+      background: var(--header-grad);
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 107, 139, 0.35);
+    }
+    .game-controls-hint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ink-mid);
+      background: var(--box-soft);
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    /* 5. 갤러리 (밝은 화이트 캡션 태그) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 12px 20px 24px;
+    }
+    .gallery-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      cursor: pointer;
+      background: var(--box-soft);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.03);
+      transition: transform 0.3s ease;
+    }
+    .gallery-card:active img {
+      transform: scale(1.04);
+    }
+    .gallery-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink-dark);
+      font-weight: 700;
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 99px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    /* 6. 기믹 B: 도망가는 불참 버튼 */
+    .rsvp-arena {
+      position: relative;
+      min-height: 190px;
+      margin: 10px 20px 22px;
+      background: var(--box-soft);
+      border: 1.5px dashed var(--line-gray);
+      border-radius: 16px;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .rsvp-Dynamic-msg {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink-dark);
+      margin-bottom: 18px;
+      text-align: center;
+      min-height: 22px;
+      word-break: keep-all;
+    }
+    .rsvp-btn-group {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      min-height: 70px;
+    }
+    .btn-attend {
+      background: var(--header-grad);
+      color: #fff;
+      border: none;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 6px 16px rgba(255, 107, 139, 0.3);
+      z-index: 3;
+    }
+    .btn-decline {
+      background: #ffffff;
+      color: var(--ink-mid);
+      border: 1px solid var(--line-gray);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      z-index: 2;
+    }
+    .boarding-confirmed-box {
+      display: none;
+      background: var(--box-soft);
+      border: 1.5px solid var(--line-gray);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 0 20px 22px;
+      text-align: center;
+    }
+    .boarding-confirmed-box.show {
+      display: block;
+      animation: popIn 0.35s ease;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* 7. 오시는 길 */
+    .location-body {
+      padding: 10px 20px 24px;
+    }
+    .venue-name-box {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .venue-name-box h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+    .venue-name-box p {
+      font-size: 13px;
+      color: var(--ink-mid);
+      margin-top: 4px;
+    }
+    .btn-copy-addr {
+      margin-top: 8px;
+      background: var(--box-soft);
+      border: 1px solid var(--line-gray);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 11.5px;
+      color: var(--accent-main-dark);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #naverMap {
+      width: 100%;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--box-soft);
+      position: relative;
+      border: 1px solid var(--line-gray);
+    }
+    .map-fallback {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(255, 107, 139, 0.12), transparent 55%),
+        repeating-linear-gradient(0deg, #fff0f4 0px, #fff0f4 1px, transparent 1px, transparent 24px),
+        repeating-linear-gradient(90deg, #fff0f4 0px, #fff0f4 1px, transparent 1px, transparent 24px),
+        #fffafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+    }
+    .map-pin-Marker {
+      background: var(--accent-main);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(255, 107, 139, 0.3);
+      margin-bottom: 8px;
+    }
+    .nav-apps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .nav-app-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 10px 6px;
+      border-radius: 10px;
+      border: 1px solid var(--line-gray);
+      background: #fff;
+      color: var(--ink-dark);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .transport-info {
+      margin-top: 16px;
+      background: var(--box-soft);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 12.5px;
+      color: var(--ink-mid);
+    }
+    .transport-info div + div {
+      margin-top: 8px;
+    }
+    .transport-info strong {
+      color: var(--ink-dark);
+    }
+
+    /* 8. 축의금 계좌번호 (검정 복사 버튼을 파스텔 포인트 버튼으로 교체) */
+    .account-wrap {
+      padding: 8px 20px 26px;
+    }
+    .acc-group {
+      border: 1px solid var(--line-gray);
+      border-radius: 14px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .acc-header {
+      width: 100%;
+      background: var(--box-soft);
+      border: none;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .acc-list {
+      display: none;
+      background: #fff;
+      border-top: 1px solid var(--line-gray);
+    }
+    .acc-list.open {
+      display: block;
+    }
+    .acc-item {
+      padding: 13px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--box-soft);
+    }
+    .acc-item:last-child {
+      border-bottom: none;
+    }
+    .acc-info .holder {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+    .acc-info .bank-num {
+      font-size: 12px;
+      color: var(--ink-mid);
+      margin-top: 2px;
+    }
+    .btn-copy-acc {
+      background: var(--accent-soft);
+      color: var(--accent-main-dark);
+      border: 1px solid var(--line-gray);
+      padding: 7px 14px;
+      border-radius: 99px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* 라이트박스 모달 (배경을 너무 무겁지 않은 블러 처리) */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(45, 35, 40, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .lightbox-caption {
+      color: #fff;
+      font-size: 13px;
+      margin-top: 12px;
+      text-align: center;
+    }
+    .lightbox-controls {
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+    }
+    .lightbox-btn {
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* 토스트 알림 */
+    .toast {
+      position: fixed;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--accent-main-dark);
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 200;
+      white-space: nowrap;
+      box-shadow: 0 8px 20px rgba(244, 63, 104, 0.3);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--ink-light);
+      padding: 16px 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-container">
+  <!-- 상단 상태 바 & 밝은 테마 전환 버튼 -->
+  <div class="top-ticker eng-font">
+    <span><span class="live-dot"></span>BOARDING : MS ♥ JK</span>
+    <button type="button" class="theme-toggle-btn" id="btnThemeToggle">🌤️ 스카이 톤 보기</button>
+  </div>
+
+  <!-- 1. 메인 보딩패스 카드 -->
+  <section class="section-card">
+    <div class="boarding-header eng-font">
+      <span class="airline">WORLD TOUR AIRLINES</span>
+      <span class="class-badge">FIRST CLASS</span>
+    </div>
+
+    <div class="route-box">
+      <div>
+        <div class="airport-code eng-font">WLD</div>
+        <div class="airport-label">1년 세계일주 완료</div>
+      </div>
+      <div class="flight-graphic">
+        <span class="plane-icon">✈️</span>
+        <span class="duration-pill eng-font">365 DAYS TRIP ➔ D-DAY</span>
+      </div>
+      <div style="text-align: right;">
+        <div class="airport-code eng-font">SEL</div>
+        <div class="airport-label">마곡 더 베뉴지</div>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <img id="heroImg" class="hero-photo" src="" alt="김민식 서진경 웨딩 대표사진" />
+      <div class="stamp-badge eng-font">HONEYMOON COMPLETED!</div>
+    </div>
+
+    <div class="ticket-meta-grid">
+      <div class="meta-item">
+        <div class="label eng-font">PASSENGERS (신랑 · 신부)</div>
+        <div class="value" id="coupleNameText">김민식 · 서진경</div>
+      </div>
+      <div class="meta-item">
+        <div class="label eng-font">DATE & BOARDING TIME</div>
+        <div class="value">2027. 03. 27 (SAT) 14:30</div>
+      </div>
+      <div class="meta-item">
+        <div class="label eng-font">TERMINAL / GATE</div>
+        <div class="value">마곡 더 베뉴지</div>
+      </div>
+      <div class="meta-item">
+        <div class="label eng-font">HALL (탑승 게이트)</div>
+        <div class="value" style="color: var(--accent-main);">마리아칼라스홀</div>
+      </div>
+    </div>
+
+    <div class="ticket-divider">
+      <div class="ticket-dashed-line"></div>
+    </div>
+
+    <div class="barcode-strip">
+      <div class="barcode-lines"></div>
+      <div class="barcode-num eng-font">2027-0327-1430-MINSIK-JINKYUNG</div>
+    </div>
+  </section>
+
+  <!-- 2. 세계일주 에필로그 & 모시는 글 -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">PROLOGUE</span>
+      <h2 class="section-title">신혼여행부터 먼저 다녀왔습니다!</h2>
+      <p class="section-sub">남들보다 조금 특별한 순서로 시작하는 두 사람의 이야기</p>
+    </div>
+
+    <div class="story-body">
+      <div class="world-stats">
+        <div class="stat-box">
+          <div class="num eng-font">365+</div>
+          <div class="txt">함께 걸은 날들</div>
+        </div>
+        <div class="stat-box">
+          <div class="num eng-font">24/7</div>
+          <div class="txt">동고동락 생존력</div>
+        </div>
+        <div class="stat-box">
+          <div class="num eng-font">100%</div>
+          <div class="txt">평생 동행 확신</div>
+        </div>
+      </div>
+
+      <p class="greeting-text">
+        "결혼식 끝나고 어디로 신혼여행 가?"라는 질문에<br/>
+        저희는 웃으며 대답합니다.<br/>
+        <span class="greeting-highlight">"저희 이미 1년 동안 세계여행 다녀왔어요!"</span><br/><br/>
+        낯선 나라에서 길을 잃고, 무거운 배낭을 나눠 메고,<br/>
+        수많은 계절을 함께 건너며 확신했습니다.<br/>
+        이 사람과 함께라면 인생이라는 가장 긴 여행도<br/>
+        매일매일이 신나는 모험이 되겠다는 것을요.<br/><br/>
+        1년간의 세계일주라는 긴 예고편을 마치고,<br/>
+        이제 <strong>서울 마곡</strong>에서 진짜 본편을 시작합니다.<br/>
+        저희의 새로운 출발선에 소중한 분들을 초대합니다.
+      </p>
+
+      <div class="parents-box">
+        <div><strong>김OO · 이OO</strong><span class="role">의 아들</span><strong>김민식</strong></div>
+        <div><strong>서OO · 박OO</strong><span class="role">의 딸</span><strong>서진경</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 예식 일시 & 카운트다운 -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">FLIGHT SCHEDULE</span>
+      <h2 class="section-title">2027. 03. 27. 토요일 오후 2시 30분</h2>
+      <p class="section-sub">마곡 더 베뉴지 마리아칼라스홀</p>
+    </div>
+
+    <div class="calendar-wrap">
+      <table class="cal-table">
+        <thead>
+          <tr>
+            <th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sun"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+          </tr>
+          <tr>
+            <td class="sun">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+          </tr>
+          <tr>
+            <td class="sun">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+          </tr>
+          <tr>
+            <td class="sun">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+            <td class="wedding-day"><span>27</span></td>
+          </tr>
+          <tr>
+            <td class="sun">28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="dday-counter eng-font">
+        <div class="dday-item"><div class="val" id="dDays">00</div><div class="unit">DAYS</div></div>
+        <div class="dday-item"><div class="val" id="dHours">00</div><div class="unit">HOURS</div></div>
+        <div class="dday-item"><div class="val" id="dMins">00</div><div class="unit">MINS</div></div>
+        <div class="dday-item"><div class="val" id="dSecs">00</div><div class="unit">SECS</div></div>
+      </div>
+      <div class="dday-msg" id="ddayMessage">민식 ♥ 진경의 본식 이륙까지 남은 시간</div>
+    </div>
+  </section>
+
+  <!-- 4. 미니 게임 C: 세계일주 마치고 웨딩홀 도착하기 -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">MINI GAME</span>
+      <h2 class="section-title">세계일주 마치고 웨딩홀 정시 도착!</h2>
+      <p class="section-sub">화면을 터치해 장애물을 뛰어넘고 마리아칼라스홀까지 달려보세요</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-canvas-wrap" id="gameTouchArea">
+        <canvas id="runnerCanvas" width="380" height="190"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <h4 id="gameOverlayTitle">✈️ 마곡 더 베뉴지 착륙 작전!</h4>
+          <p id="gameOverlayDesc">배낭 짐, 비행기 연착, 주말 교통체증을 점프로 피해서<br/>오후 2시 30분 예식장까지 도착해 주세요! (목표: 100m)</p>
+          <button class="btn-game" id="btnStartGame">게임 시작하기 (터치!)</button>
+        </div>
+      </div>
+      <div class="game-controls-hint">
+        💡 게임 화면 아무 곳이나 <strong>톡! 터치(클릭)</strong>하면 점프합니다.
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 사진 갤러리 -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">TRAVEL & WEDDING LOG</span>
+      <h2 class="section-title">우리의 여정 기록</h2>
+      <p class="section-sub">사진을 터치하면 크게 보실 수 있습니다</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+  <!-- 6. 기믹 B: 도망가는 불참 버튼 (탑승 수속) -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">BOARDING CHECK-IN</span>
+      <h2 class="section-title">결혼식 탑승 수속 (참석 확인)</h2>
+      <p class="section-sub">2027년 3월 27일 오후 2시 30분, 함께해 주실 거죠?</p>
+    </div>
+
+    <div class="rsvp-arena" id="rsvpArena">
+      <div class="rsvp-Dynamic-msg" id="rsvpMessage">
+        버튼을 눌러 탑승(참석) 여부를 알려주세요! 😊
+      </div>
+      <div class="rsvp-btn-group" id="rsvpBtnGroup">
+        <button class="btn-attend" id="btnAttend">무조건 참석! ✈️</button>
+        <button class="btn-decline" id="btnDecline">아쉽지만 불참 😭</button>
+      </div>
+    </div>
+
+    <div class="boarding-confirmed-box" id="boardingConfirmed">
+      <div style="font-size: 24px; margin-bottom: 4px;">🎫✨</div>
+      <div style="font-weight: 800; color: var(--accent-main-dark); font-size: 15px;">
+        VIP 하객 탑승권이 발급되었습니다!
+      </div>
+      <p style="font-size: 12.5px; color: var(--ink-mid); margin-top: 6px;">
+        2027년 3월 27일 토요일 오후 2시 30분,<br/>
+        마곡 더 베뉴지 마리아칼라스홀에서 반갑게 뵙겠습니다!
+      </p>
+    </div>
+  </section>
+
+  <!-- 7. 오시는 길 -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">ARRIVAL GATE</span>
+      <h2 class="section-title">오시는 길</h2>
+      <p class="section-sub">착륙지 : 마곡 더 베뉴지 마리아칼라스홀</p>
+    </div>
+
+    <div class="location-body">
+      <div class="venue-name-box">
+        <h4>더 베뉴지 (The VenueG) 마리아칼라스홀</h4>
+        <p id="venueAddressText">서울특별시 강서구 강서로 388 (등촌동 678-14)</p>
+        <button class="btn-copy-addr" id="btnCopyAddr">📋 주소 복사하기</button>
+      </div>
+
+      <div id="naverMap">
+        <div class="map-fallback" id="mapFallback">
+          <div class="map-pin-Marker">📍 마곡 더 베뉴지 (마리아칼라스홀)</div>
+          <div style="font-size: 12px; color: var(--ink-mid); font-weight: 600;">
+            발산역 3번 출구 바로 앞 / 양천향교역 6번 출구 도보 5분
+          </div>
+          <div style="font-size: 11px; color: var(--ink-light); margin-top: 4px;">
+            (아래 네이버/카카오/티맵 버튼을 누르면 길찾기가 바로 실행됩니다)
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-apps-row">
+        <a class="nav-app-btn" href="https://map.naver.com/p/search/%EB%8D%94%EB%B2%A0%EB%89%B4%EC%A7%80" target="_blank" rel="noopener">
+          🟢 네이버지도
+        </a>
+        <a class="nav-app-btn" href="https://map.kakao.com/link/search/%EB%8D%94%EB%B2%A0%EB%89%B4%EC%A7%80" target="_blank" rel="noopener">
+          🟡 카카오맵
+        </a>
+        <a class="nav-app-btn" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx&name=%EB%8D%94%EB%B2%A0%EB%89%B4%EC%A7%80&lon=126.8393&lat=37.5602" target="_blank" rel="noopener">
+          🔵 티맵 안내
+        </a>
+      </div>
+
+      <div class="transport-info">
+        <div>🚇 <strong>지하철 :</strong> 5호선 발산역 3번 출구 방향 바로 앞 / 9호선 양천향교역 6번 출구 도보 5분</div>
+        <div>🚌 <strong>버스 :</strong> '발산역·더베뉴지' 정류장 하차 (601, 605, 652, 6630, 6632 등)</div>
+        <div>🚗 <strong>주차 안내 :</strong> 건물 내 전용 주차장 이용 (하객 무료 주차 지원)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 마음 전하실 곳 (계좌번호) -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">TRAVEL FUND & BLESSING</span>
+      <h2 class="section-title">마음 전하실 곳</h2>
+      <p class="section-sub">축하의 마음을 담아 축복해 주시는 모든 분께 감사드립니다</p>
+    </div>
+
+    <div class="account-wrap" id="accountContainer"></div>
+  </section>
+
+  <footer class="eng-font">
+    DESIGNED FOR KIM MIN SIK & SEO JIN KYUNG · 2027.03.27
+  </footer>
+</div>
+
+<!-- 갤러리 라이트박스 -->
+<div class="lightbox" id="lightbox">
+  <img id="lightboxImg" src="" alt="갤러리 확대 이미지" />
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+  <div class="lightbox-controls">
+    <button class="lightbox-btn" id="lbPrev">◀ 이전</button>
+    <button class="lightbox-btn" id="lbClose">닫기 ✕</button>
+    <button class="lightbox-btn" id="lbNext">다음 ▶</button>
+  </div>
+</div>
+
+<!-- 복사 완료 토스트 -->
+<div class="toast" id="toast">복사되었습니다!</div>
+
+<script>
+  /**
+   * ============================================================================
+   * [청첩장 설정 영역] 나중에 사진 파일명이나 계좌번호만 여기서 바꾸시면 바로 반영됩니다!
+   * ============================================================================
+   */
+  const WEDDING_CONFIG = {
+    groomName: "김민식",
+    brideName: "서진경",
+    weddingDateISO: "2027-03-27T14:30:00+09:00",
+    venueName: "마곡 더 베뉴지 마리아칼라스홀",
+    venueAddress: "서울특별시 강서구 강서로 388",
+    venueLat: 37.5602,
+    venueLng: 126.8393,
+
+    // 대표 사진 (내 컴퓨터 사진 사용 시 "main.jpg" 처럼 파일명만 적으시면 됩니다)
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+
+    // 갤러리 사진 목록 (나중에 pic1.jpg, pic2.jpg 등으로 교체하세요!)
+    gallery: [
+      {
+        src: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80",
+        tag: "WORLD TOUR #1",
+        caption: "1년간의 세계여행, 끝없는 도로 위에서"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80",
+        tag: "WORLD TOUR #2",
+        caption: "가장 아름다운 풍경은 언제나 나란히 걷는 순간"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80",
+        tag: "OUR PROMISE",
+        caption: "여행 메이트에서 이제는 평생의 동반자로"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80",
+        tag: "2027. 03. 27",
+        caption: "마곡 더 베뉴지 마리아칼라스홀에서 만나요!"
+      }
+    ],
+
+    // 축의금 계좌번호 정보
+    accounts: [
+      {
+        groupTitle: "🛫 신랑측 계좌번호 보기",
+        items: [
+          { holder: "김민식 (신랑)", bank: "카카오뱅크", number: "3333-00-0000000" },
+          { holder: "김OO (신랑 아버지)", bank: "국민은행", number: "000000-00-000000" },
+          { holder: "이OO (신랑 어머니)", bank: "신한은행", number: "110-000-000000" }
+        ]
+      },
+      {
+        groupTitle: "🛬 신부측 계좌번호 보기",
+        items: [
+          { holder: "서진경 (신부)", bank: "토스뱅크", number: "1000-0000-0000" },
+          { holder: "서OO (신부 아버지)", bank: "우리은행", number: "1002-000-000000" },
+          { holder: "박OO (신부 어머니)", bank: "농협은행", number: "302-0000-0000-00" }
+        ]
+      }
+    ]
+  };
+
+  // 0. 밝은 테마 스위치 (로맨틱 코랄 <-> 파스텔 스카이)
+  const btnThemeToggle = document.getElementById("btnThemeToggle");
+  btnThemeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("theme-sky");
+    const isSky = document.body.classList.contains("theme-sky");
+    btnThemeToggle.textContent = isSky ? "🌸 코랄 톤 보기" : "🌤️ 스카이 톤 보기";
+  });
+
+  // 1. 초기 이미지 및 텍스트 세팅
+  document.getElementById("heroImg").src = WEDDING_CONFIG.heroImage;
+  document.getElementById("venueAddressText").textContent = WEDDING_CONFIG.venueAddress;
+
+  // 토스트 알림 함수
+  let toastTimer = null;
+  function showToast(msg) {
+    const t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), 2300);
+  }
+
+  // 클립보드 복사 함수
+  function copyText(text, label) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => showToast(label + " 복사되었습니다!"));
+    } else {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      showToast(label + " 복사되었습니다!");
+    }
+  }
+
+  document.getElementById("btnCopyAddr").addEventListener("click", () => {
+    copyText(WEDDING_CONFIG.venueAddress, "예식장 주소가");
+  });
+
+  // 2. D-Day 실시간 카운트다운
+  function updateCountdown() {
+    const target = new Date(WEDDING_CONFIG.weddingDateISO).getTime();
+    const now = new Date().getTime();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.getElementById("dDays").textContent = "0";
+      document.getElementById("dHours").textContent = "0";
+      document.getElementById("dMins").textContent = "0";
+      document.getElementById("dSecs").textContent = "0";
+      document.getElementById("ddayMessage").textContent = "오늘, 김민식 ♥ 서진경의 새로운 여행이 시작됩니다!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("dDays").textContent = String(days);
+    document.getElementById("dHours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("dMins").textContent = String(mins).padStart(2, "0");
+    document.getElementById("dSecs").textContent = String(secs).padStart(2, "0");
+    document.getElementById("ddayMessage").innerHTML =
+      `민식 ♥ 진경의 결혼식까지 <strong>${days}일</strong> 남았습니다 ✈️`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // 3. 갤러리 렌더링 & 라이트박스
+  const galleryGrid = document.getElementById("galleryGrid");
+  let currentPhotoIdx = 0;
+
+  WEDDING_CONFIG.gallery.forEach((item, idx) => {
+    const card = document.createElement("div");
+    card.className = "gallery-card";
+    card.innerHTML = `
+      <img src="${item.src}" alt="${item.caption}" loading="lazy" />
+      <span class="gallery-tag eng-font">${item.tag}</span>
+    `;
+    card.addEventListener("click", () => openLightbox(idx));
+    galleryGrid.appendChild(card);
+  });
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+
+  function openLightbox(idx) {
+    currentPhotoIdx = idx;
+    const item = WEDDING_CONFIG.gallery[currentPhotoIdx];
+    lightboxImg.src = item.src;
+    lightboxCaption.textContent = item.caption;
+    lightbox.classList.add("open");
+  }
+  document.getElementById("lbClose").addEventListener("click", () => lightbox.classList.remove("open"));
+  document.getElementById("lbPrev").addEventListener("click", () => {
+    currentPhotoIdx = (currentPhotoIdx - 1 + WEDDING_CONFIG.gallery.length) % WEDDING_CONFIG.gallery.length;
+    openLightbox(currentPhotoIdx);
+  });
+  document.getElementById("lbNext").addEventListener("click", () => {
+    currentPhotoIdx = (currentPhotoIdx + 1) % WEDDING_CONFIG.gallery.length;
+    openLightbox(currentPhotoIdx);
+  });
+
+  // 4. 기믹 B: 도망가는 '불참' 버튼
+  const btnAttend = document.getElementById("btnAttend");
+  const btnDecline = document.getElementById("btnDecline");
+  const rsvpMessage = document.getElementById("rsvpMessage");
+  const rsvpArena = document.getElementById("rsvpArena");
+  const boardingConfirmed = document.getElementById("boardingConfirmed");
+
+  let declineAttempts = 0;
+  const wittyExcuses = [
+    "어허! 손가락이 미끄러지셨군요? 👀",
+    "1년 세계여행 썰 들어야 하는데 안 오실 건가요?! 🌍",
+    "마리아칼라스홀 밥이 그렇게 맛있는데...? 🍽️",
+    "불참 버튼이 시차 적응 중이라 안 눌립니다 ✈️",
+    "포기하세요! 이미 당신의 좌석은 확보되었습니다 😆"
+  ];
+
+  function dodgeDeclineButton(e) {
+    if (e) e.preventDefault();
+    declineAttempts++;
+
+    const msgIdx = Math.min(declineAttempts - 1, wittyExcuses.length - 1);
+    rsvpMessage.textContent = wittyExcuses[msgIdx];
+    rsvpMessage.style.color = "#f43f68";
+
+    // 참석 버튼 점점 커지기
+    const growScale = Math.min(1 + declineAttempts * 0.14, 1.65);
+    btnAttend.style.transform = `scale(${growScale})`;
+
+    // 불참 버튼 랜덤 도망 & 작아지기
+    const maxOffsetX = 95;
+    const maxOffsetY = 38;
+    const randX = (Math.random() * 2 - 1) * maxOffsetX;
+    const randY = (Math.random() * 2 - 1) * maxOffsetY;
+    const shrinkScale = Math.max(0.55, 1 - declineAttempts * 0.08);
+
+    btnDecline.style.transform = `translate(${randX}px, ${randY}px) scale(${shrinkScale})`;
+
+    if (declineAttempts >= 5) {
+      btnDecline.textContent = "참석할게요 😂";
+      btnDecline.onclick = confirmAttendance;
+    }
+  }
+
+  btnDecline.addEventListener("mouseover", dodgeDeclineButton);
+  btnDecline.addEventListener("touchstart", dodgeDeclineButton, { passive: false });
+  btnDecline.addEventListener("click", (e) => {
+    if (declineAttempts < 5) dodgeDeclineButton(e);
+  });
+
+  function confirmAttendance() {
+    rsvpArena.style.display = "none";
+    boardingConfirmed.classList.add("show");
+    showToast("✈️ 탑승 수속(참석 확인) 완료! 3월 27일에 만나요!");
+  }
+  btnAttend.addEventListener("click", confirmAttendance);
+
+  // 5. 미니 게임 C: 세계일주 마치고 웨딩홀 정시 도착 러너 게임
+  const canvas = document.getElementById("runnerCanvas");
+  const ctx = canvas.getContext("2d");
+  const gameOverlay = document.getElementById("gameOverlay");
+  const gameOverlayTitle = document.getElementById("gameOverlayTitle");
+  const gameOverlayDesc = document.getElementById("gameOverlayDesc");
+  const btnStartGame = document.getElementById("btnStartGame");
+  const gameTouchArea = document.getElementById("gameTouchArea");
+
+  let gameRunning = false;
+  let distance = 0;
+  const GOAL_DISTANCE = 100;
+  let player = { x: 42, y: 120, vy: 0, width: 32, height: 32, grounded: true };
+  let obstacles = [];
+  let frameCount = 0;
+
+  const obstacleTypes = [
+    { icon: "🎒", label: "20kg배낭" },
+    { icon: "⏰", label: "비행연착" },
+    { icon: "🚦", label: "주말정체" }
+  ];
+
+  function resetGame() {
+    distance = 0;
+    player = { x: 42, y: 120, vy: 0, width: 32, height: 32, grounded: true };
+    obstacles = [];
+    frameCount = 0;
+    gameRunning = true;
+    gameOverlay.classList.add("hidden");
+    requestAnimationFrame(gameLoop);
+  }
+
+  function jump() {
+    if (!gameRunning) return;
+    if (player.grounded) {
+      player.vy = -8.8;
+      player.grounded = false;
+    }
+  }
+
+  gameTouchArea.addEventListener("pointerdown", (e) => {
+    if (e.target === btnStartGame) return;
+    jump();
+  });
+  btnStartGame.addEventListener("click", resetGame);
+
+  function gameLoop() {
+    if (!gameRunning) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    frameCount++;
+    distance = Math.min(GOAL_DISTANCE, Math.floor(frameCount / 6));
+
+    // 상단 진행 거리 텍스트
+    ctx.fillStyle = "#d6335c";
+    ctx.font = "bold 12px Pretendard, sans-serif";
+    ctx.fillText(`🏃 마곡 더 베뉴지까지 : ${distance}m / ${GOAL_DISTANCE}m`, 14, 24);
+
+    // 바닥 선 (화사한 핑크 코랄 라인)
+    ctx.strokeStyle = "#f9a8d4";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, 154);
+    ctx.lineTo(canvas.width, 154);
+    ctx.stroke();
+
+    // 목적지 웨딩홀 표시 (82m 이후 등장)
+    if (distance >= 82) {
+      const hallX = canvas.width - (distance - 80) * 14;
+      ctx.font = "28px sans-serif";
+      ctx.fillText("🏛️", hallX, 148);
+      ctx.font = "bold 10px Pretendard, sans-serif";
+      ctx.fillStyle = "#e11d48";
+      ctx.fillText("마리아칼라스홀", hallX - 18, 170);
+    }
+
+    // 플레이어 물리
+    player.y += player.vy;
+    player.vy += 0.46;
+    if (player.y >= 120) {
+      player.y = 120;
+      player.vy = 0;
+      player.grounded = true;
+    }
+
+    // 플레이어 그리기
+    ctx.font = "27px sans-serif";
+    ctx.fillText("🤵👰", player.x, player.y + 26);
+
+    // 장애물 생성
+    if (frameCount % 75 === 0 && distance < 85) {
+      const pick = obstacleTypes[Math.floor(Math.random() * obstacleTypes.length)];
+      obstacles.push({
+        x: canvas.width + 10,
+        y: 124,
+        width: 24,
+        height: 26,
+        icon: pick.icon,
+        label: pick.label
+      });
+    }
+
+    // 장애물 이동 및 충돌 체크
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+      const obs = obstacles[i];
+      obs.x -= 4.2;
+
+      ctx.font = "22px sans-serif";
+      ctx.fillText(obs.icon, obs.x, obs.y + 22);
+      ctx.font = "10px Pretendard, sans-serif";
+      ctx.fillStyle = "#6e5d63";
+      ctx.fillText(obs.label, obs.x - 6, obs.y + 38);
+
+      if (
+        player.x + 28 > obs.x + 4 &&
+        player.x + 6 < obs.x + obs.width &&
+        player.y + 28 > obs.y + 6
+      ) {
+        gameRunning = false;
+        gameOverlayTitle.textContent = `앗! '${obs.label}'에 걸렸어요 😅`;
+        gameOverlayDesc.innerHTML = `${distance}m 지점에서 멈췄습니다!<br/>다시 점프해서 마리아칼라스홀까지 완주해 보세요!`;
+        btnStartGame.textContent = "다시 도전하기 🔄";
+        gameOverlay.classList.remove("hidden");
+        return;
+      }
+
+      if (obs.x < -40) obstacles.splice(i, 1);
+    }
+
+    // 클리어 판정
+    if (distance >= GOAL_DISTANCE) {
+      gameRunning = false;
+      gameOverlayTitle.textContent = "🎉 마리아칼라스홀 정시 도착 성공!";
+      gameOverlayDesc.innerHTML = "세계일주 내공으로 모든 장애물을 돌파했습니다!<br/>2027년 3월 27일 오후 2시 30분에 만나요!";
+      btnStartGame.textContent = "한 번 더 달리기 ✈️";
+      gameOverlay.classList.remove("hidden");
+      showToast("🏆 미션 클리어! 명예 하객으로 임명합니다!");
+      return;
+    }
+
+    requestAnimationFrame(gameLoop);
+  }
+
+  // 6. 계좌번호 아코디언 렌더링
+  const accountContainer = document.getElementById("accountContainer");
+  WEDDING_CONFIG.accounts.forEach((group, gIdx) => {
+    const wrap = document.createElement("div");
+    wrap.className = "acc-group";
+
+    const itemsHtml = group.items.map(item => `
+      <div class="acc-item">
+        <div class="acc-info">
+          <div class="holder">${item.holder}</div>
+          <div class="bank-num">${item.bank} ${item.number}</div>
+        </div>
+        <button class="btn-copy-acc" data-acc="${item.bank} ${item.number}">복사</button>
+      </div>
+    `).join("");
+
+    wrap.innerHTML = `
+      <button class="acc-header" type="button">
+        <span>${group.groupTitle}</span>
+        <span>▼</span>
+      </button>
+      <div class="acc-list ${gIdx === 0 ? "open" : ""}">
+        ${itemsHtml}
+      </div>
+    `;
+    accountContainer.appendChild(wrap);
+  });
+
+  accountContainer.addEventListener("click", (e) => {
+    const header = e.target.closest(".acc-header");
+    if (header) {
+      const list = header.nextElementSibling;
+      list.classList.toggle("open");
+      return;
+    }
+    const copyBtn = e.target.closest(".btn-copy-acc");
+    if (copyBtn) {
+      copyText(copyBtn.getAttribute("data-acc"), "계좌번호가");
+    }
+  });
+
+  // 7. 네이버 지도 초기화
+  window.addEventListener("load", () => {
+    try {
+      if (window.naver && window.naver.maps) {
+        const position = new naver.maps.LatLng(WEDDING_CONFIG.venueLat, WEDDING_CONFIG.venueLng);
+        const map = new naver.maps.Map("naverMap", {
+          center: position,
+          zoom: 16
+        });
+        new naver.maps.Marker({
+          position: position,
+          map: map
+        });
+        const fallback = document.getElementById("mapFallback");
+        if (fallback) fallback.style.display = "none";
+      }
+    } catch (err) {
+      // API 키 미입력 시 스타일된 프리뷰 폴백 유지
+    }
+  });
+</script>
+</body>
+</html>
