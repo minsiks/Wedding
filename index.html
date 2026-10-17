@@ -97,7 +97,7 @@
       letter-spacing: 0.04em;
     }
 
-    /* 공통 미니 국기 아이콘 스타일 (이니셜 깨짐 방지용 실제 이미지) */
+    /* 공통 미니 국기 아이콘 스타일 */
     .flag-icon {
       width: 16px;
       height: 12px;
@@ -1062,6 +1062,168 @@
       cursor: pointer;
     }
 
+    /* 9. 실시간 축하 방명록 (기내 라운지 톡) */
+    .guestbook-wrap {
+      padding: 10px 20px 26px;
+    }
+    .gb-status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: var(--ink-mid);
+      font-weight: 600;
+    }
+    .gb-live-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #10b981;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .gb-live-indicator::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+      animation: blink 1.4s infinite;
+    }
+    .gb-badge-selector {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .gb-badge-btn {
+      flex: 1;
+      padding: 8px 4px;
+      border-radius: 10px;
+      border: 1.5px solid var(--line-gray);
+      background: #fff;
+      color: var(--ink-mid);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+    .gb-badge-btn.active {
+      background: var(--accent-soft);
+      border-color: var(--accent-main);
+      color: var(--accent-main-dark);
+      font-weight: 700;
+    }
+    .gb-input-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .gb-input {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: 11px;
+      border: 1.5px solid var(--line-gray);
+      background: var(--box-soft);
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--ink-dark);
+      outline: none;
+    }
+    .gb-input:focus {
+      border-color: var(--accent-main);
+      background: #fff;
+    }
+    .gb-textarea {
+      resize: none;
+      height: 74px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .btn-gb-submit {
+      width: 100%;
+      background: var(--header-grad);
+      color: #fff;
+      border: none;
+      padding: 13px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 107, 139, 0.28);
+      margin-bottom: 18px;
+    }
+    .btn-gb-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .gb-chat-list {
+      max-height: 380px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-right: 2px;
+    }
+    .gb-chat-item {
+      background: var(--box-soft);
+      border: 1px solid var(--line-gray);
+      border-radius: 14px;
+      padding: 13px 15px;
+      position: relative;
+      animation: popIn 0.25s ease;
+    }
+    .gb-chat-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .gb-author-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gb-tag-pill {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 99px;
+      background: #fff;
+      border: 1px solid var(--line-gray);
+      color: var(--accent-main-dark);
+    }
+    .gb-author {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+    .gb-meta-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .gb-date {
+      font-size: 11px;
+      color: var(--ink-light);
+    }
+    .gb-del-btn {
+      background: none;
+      border: none;
+      color: var(--ink-light);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 2px 4px;
+    }
+    .gb-msg {
+      font-size: 13.2px;
+      color: var(--ink-mid);
+      line-height: 1.55;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+
     /* 라이트박스 모달 */
     .lightbox {
       position: fixed;
@@ -1247,7 +1409,7 @@
     </div>
   </section>
 
-  <!-- 2-2. 아이디어 1: 세계여행 경로 애니메이션 지도 -->
+  <!-- 2-2. 세계여행 경로 애니메이션 지도 -->
   <section class="section-card" id="routeSection">
     <div class="section-header">
       <span class="section-tag eng-font">WORLD ROUTE MAP</span>
@@ -1259,7 +1421,6 @@
       <canvas id="routeCanvas" width="380" height="225"></canvas>
     </div>
 
-    <!-- 실시간 현재 비행 국가 카드 -->
     <div class="route-live-card">
       <div class="route-live-left">
         <div class="route-flag-circle" id="routeFlag">
@@ -1273,7 +1434,6 @@
       <div class="route-stay-badge" id="routeStayBadge">START ✈️</div>
     </div>
 
-    <!-- 국가별 터치 칩 리스트 (미니 국기 아이콘 적용 & 스포일러 방지) -->
     <div class="route-chips-scroll" id="routeChips"></div>
 
     <div class="route-stats-row">
@@ -1288,7 +1448,7 @@
     </div>
   </section>
 
-  <!-- 2-3. 아이디어 2: 세계여행 퀴즈 & 에피소드 게임 -->
+  <!-- 2-3. 세계여행 퀴즈 & 에피소드 게임 -->
   <section class="section-card">
     <div class="section-header">
       <span class="section-tag eng-font">WORLD TOUR QUIZ</span>
@@ -1505,6 +1665,43 @@
     <div class="account-wrap" id="accountContainer"></div>
   </section>
 
+  <!-- 9. 실시간 기내 방명록 (Firebase DB 연동 완료!) -->
+  <section class="section-card">
+    <div class="section-header">
+      <span class="section-tag eng-font">IN-FLIGHT LOUNGE TALK</span>
+      <h2 class="section-title">실시간 축하 메시지 💬</h2>
+      <p class="section-sub">두 사람의 새로운 출발에 따뜻한 응원 한마디를 남겨주세요</p>
+    </div>
+
+    <div class="guestbook-wrap">
+      <div class="gb-status-bar">
+        <span class="gb-live-indicator">실시간 라운지 연결됨</span>
+        <span id="gbCountText">축하 메시지 0개</span>
+      </div>
+
+      <!-- 하객 구분 뱃지 선택 -->
+      <div class="gb-badge-selector" id="gbBadgeSelector">
+        <button type="button" class="gb-badge-btn active" data-tag="🤵 신랑측">🤵 신랑측</button>
+        <button type="button" class="gb-badge-btn" data-tag="👰 신부측">👰 신부측</button>
+        <button type="button" class="gb-badge-btn" data-tag="🌍 여행메이트">🌍 여행메이트</button>
+      </div>
+
+      <!-- 이름 & 비밀번호 입력 -->
+      <div class="gb-input-row">
+        <input type="text" id="gbName" class="gb-input" placeholder="성함 또는 별명" maxlength="12" style="flex: 1.3;" />
+        <input type="password" id="gbPw" class="gb-input" placeholder="비밀번호 (삭제용)" maxlength="8" style="flex: 1;" />
+      </div>
+
+      <!-- 축하 메시지 입력 -->
+      <textarea id="gbMsg" class="gb-input gb-textarea" placeholder="민식 ♥ 진경에게 축하 메시지를 남겨주세요! ✈️" maxlength="200"></textarea>
+
+      <button type="button" class="btn-gb-submit" id="btnGbSubmit">✈️ 축하 메시지 등록하기</button>
+
+      <!-- 실시간 메시지 목록 -->
+      <div class="gb-chat-list" id="gbChatList"></div>
+    </div>
+  </section>
+
   <footer class="eng-font">
     DESIGNED FOR KIM MIN SIK & SEO JIN KYUNG · 2027.03.27
   </footer>
@@ -1526,7 +1723,7 @@
 
 <script>
   /**
-   * 미니 국기 아이콘 생성 헬퍼 함수 (이니셜 깨짐 완벽 방지)
+   * 미니 국기 아이콘 생성 헬퍼 함수
    */
   function getFlagHtml(code) {
     return `<img class="flag-icon" src="https://flagcdn.com/w40/${code}.png" alt="${code}" />`;
@@ -1571,7 +1768,6 @@
       }
     ],
 
-    // [아이디어 2] 여행지 퀴즈 & 에피소드 데이터 (선택지에서 정답 일수 괄호 모두 제거 & 미니 국기 적용!)
     quiz: [
       {
         question: "Q1. 476일의 세계여행 중, 두 사람이 '단일 체류'로 무려 47일 동안 가장 오래 머문 나라는 어디일까요?",
@@ -1650,7 +1846,7 @@
     ]
   };
 
-  // 0. 밝은 테마 스위치 (로맨틱 코랄 <-> 파스텔 스카이)
+  // 0. 밝은 테마 스위치
   const btnThemeToggle = document.getElementById("btnThemeToggle");
   btnThemeToggle.addEventListener("click", () => {
     document.body.classList.toggle("theme-sky");
@@ -1722,7 +1918,7 @@
   setInterval(updateCountdown, 1000);
 
   // ============================================================================
-  // [아이디어 1] 476일 세계여행 경로 애니메이션 지도 (실제 국기 이미지 & 스크롤 고정 제거)
+  // [아이디어 1] 476일 세계여행 경로 애니메이션 지도
   // ============================================================================
   (function() {
     const ROUTE_STOPS = [
@@ -1778,7 +1974,6 @@
     const btnReplay = document.getElementById("btnRouteReplay");
     const btnSpeed  = document.getElementById("btnRouteSpeed");
 
-    // 캔버스용 미니 국기 이미지 프리로드
     const flagImages = {};
     ROUTE_STOPS.forEach(s => {
       if (!flagImages[s.code]) {
@@ -1797,7 +1992,6 @@
 
     const points = ROUTE_STOPS.map(s => ({ ...s, ...project(s.lon, s.lat) }));
 
-    // 하단 칩 생성 (체류일 괄호 숨김 & 실제 미니 국기 이미지 적용)
     const chipElements = [];
     points.forEach((pt, idx) => {
       if (idx === points.length - 1) return;
@@ -1890,8 +2084,6 @@
         c.classList.toggle("active", i === idx);
       });
 
-      // [수정됨] 화면 상하 스크롤을 뺏는 scrollIntoView() 제거!
-      // 가로 칩 바 내부의 scrollLeft만 조용히 이동시켜 페이지 스크롤 방해가 전혀 없습니다.
       const activeChip = chipElements[idx];
       if (activeChip) {
         const targetLeft = activeChip.offsetLeft - (chipsContainer.clientWidth / 2) + (activeChip.clientWidth / 2);
@@ -1902,7 +2094,6 @@
     function drawMap(activeIdx, t, showAllHint) {
       drawPastelWorld();
 
-      // 전체 예정 경로 연한 점선
       rCtx.save();
       rCtx.setLineDash([3, 3]);
       rCtx.strokeStyle = "rgba(255, 107, 139, 0.28)";
@@ -1917,7 +2108,6 @@
       }
       rCtx.restore();
 
-      // 완료된 경로 진한 코랄 라인
       rCtx.strokeStyle = "#ff5c7c";
       rCtx.lineWidth = 2.2;
       for (let i = 0; i < activeIdx; i++) {
@@ -1929,7 +2119,6 @@
         rCtx.stroke();
       }
 
-      // 현재 이동 중인 구간 곡선
       let planePos = points[activeIdx];
       if (activeIdx < points.length - 1 && t > 0) {
         const p0 = points[activeIdx], p1 = points[activeIdx + 1];
@@ -1943,7 +2132,6 @@
         planePos = getQuadPoint(p0, p1, t);
       }
 
-      // 방문 국가 핀 찍기
       points.forEach((pt, i) => {
         if (i === points.length - 1) return;
         const visited = i <= activeIdx || showAllHint;
@@ -1958,11 +2146,9 @@
         }
       });
 
-      // 현재 비행기 표시
       rCtx.font = "16px sans-serif";
       rCtx.fillText("✈️", planePos.x - 8, planePos.y - 6);
 
-      // 현재 국가 말풍선 (이니셜 대신 실제 미니 국기 이미지 + 국가명 렌더링)
       const cur = points[activeIdx];
       const labelText = cur.name;
       rCtx.font = "bold 11px Pretendard, sans-serif";
@@ -2031,7 +2217,6 @@
       btnSpeed.textContent = speedMult === 1 ? "⚡ 1x" : "⚡ 2x 빠름";
     });
 
-    // 초기 정지 화면 렌더링 & 스크롤 시 자동 1회 재생 (스크롤 포커스 강제 이동 없음)
     drawMap(0, 0, true);
     let autoPlayed = false;
     const observer = new IntersectionObserver((entries) => {
@@ -2044,7 +2229,7 @@
   })();
 
   // ============================================================================
-  // [아이디어 2] 세계여행 퀴즈 & 에피소드 게임 (미니 국기 이미지 + 정답 괄호 제거)
+  // [아이디어 2] 세계여행 퀴즈 & 에피소드 게임
   // ============================================================================
   (function() {
     const questions = WEDDING_CONFIG.quiz;
@@ -2444,7 +2629,7 @@
   });
 
   // ============================================================
-  // 보너스 게임: 세계여행 기념품 수집 캐치 게임
+  // 8. 보너스 게임: 세계여행 기념품 수집 캐치 게임
   // ============================================================
   (function() {
     const cc       = document.getElementById('catcherCanvas');
@@ -2646,6 +2831,162 @@
       cx.restore();
       requestAnimationFrame(loop);
     }
+  })();
+
+  // ============================================================
+  // 9. 실시간 기내 방명록 (Firebase DB 연동: wedding-82938)
+  // ============================================================
+  (function() {
+    // 발급받으신 Firebase Realtime Database 주소 적용 완료!
+    const FIREBASE_DB_URL = "https://wedding-82938-default-rtdb.firebaseio.com";
+    const MASTER_PW = "0327"; // 신랑·신부용 마스터 삭제 비밀번호 (예식일 0327)
+
+    const badgeBtns = document.querySelectorAll("#gbBadgeSelector .gb-badge-btn");
+    const nameInput = document.getElementById("gbName");
+    const pwInput   = document.getElementById("gbPw");
+    const msgInput  = document.getElementById("gbMsg");
+    const submitBtn = document.getElementById("btnGbSubmit");
+    const chatList  = document.getElementById("gbChatList");
+    const countText = document.getElementById("gbCountText");
+
+    let selectedTag = "🤵 신랑측";
+
+    // 하객 구분 뱃지 선택
+    badgeBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        badgeBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        selectedTag = btn.getAttribute("data-tag");
+      });
+    });
+
+    function formatTime() {
+      const d = new Date();
+      return `${d.getMonth() + 1}.${d.getDate()} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+    }
+
+    function escapeHtml(str) {
+      return String(str || "").replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    }
+
+    // 화면에 메시지 목록 렌더링
+    function renderMessages(list) {
+      countText.textContent = `축하 메시지 ${list ? list.length : 0}개`;
+
+      if (!list || list.length === 0) {
+        chatList.innerHTML = `
+          <div style="text-align:center; padding:28px 16px; color:var(--ink-light); font-size:13px;">
+            아직 등록된 메시지가 없습니다.<br/>첫 번째 축하 주인공이 되어주세요! ✈️
+          </div>`;
+        return;
+      }
+
+      chatList.innerHTML = list.map(item => `
+        <div class="gb-chat-item">
+          <div class="gb-chat-top">
+            <div class="gb-author-wrap">
+              <span class="gb-tag-pill">${escapeHtml(item.tag || "하객")}</span>
+              <span class="gb-author">${escapeHtml(item.name)}</span>
+            </div>
+            <div class="gb-meta-right">
+              <span class="gb-date">${escapeHtml(item.date)}</span>
+              <button type="button" class="gb-del-btn" data-id="${escapeHtml(item.id)}" data-pw="${escapeHtml(item.pw)}" title="삭제">✕</button>
+            </div>
+          </div>
+          <div class="gb-msg">${escapeHtml(item.msg)}</div>
+        </div>
+      `).join("");
+    }
+
+    // Firebase에서 실시간 메시지 불러오기
+    async function loadMessages() {
+      try {
+        const res = await fetch(`${FIREBASE_DB_URL}/guestbook.json`);
+        if (!res.ok) throw new Error("DB 응답 오류");
+        const data = await res.json();
+        if (!data) {
+          renderMessages([]);
+          return;
+        }
+        const arr = Object.keys(data)
+          .map(key => ({ id: key, ...data[key] }))
+          .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        renderMessages(arr);
+      } catch (e) {
+        console.error("방명록 로드 오류:", e);
+      }
+    }
+
+    // 메시지 등록하기 (첫 등록 시 Firebase에 자동으로 guestbook 노드가 생성됩니다)
+    submitBtn.addEventListener("click", async () => {
+      const name = nameInput.value.trim();
+      const pw   = pwInput.value.trim();
+      const msg  = msgInput.value.trim();
+
+      if (!name) return showToast("성함 또는 별명을 입력해 주세요!");
+      if (!pw)   return showToast("삭제용 비밀번호를 입력해 주세요!");
+      if (!msg)  return showToast("축하 메시지를 입력해 주세요!");
+
+      const newEntry = {
+        tag: selectedTag,
+        name,
+        pw,
+        msg,
+        date: formatTime(),
+        createdAt: Date.now()
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "전송 중... ✈️";
+
+      try {
+        const res = await fetch(`${FIREBASE_DB_URL}/guestbook.json`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newEntry)
+        });
+        if (!res.ok) throw new Error("쓰기 권한 확인 필요");
+        msgInput.value = "";
+        await loadMessages();
+        showToast("💌 따뜻한 축하 메시지가 등록되었습니다!");
+      } catch (e) {
+        showToast("DB 권한 설정(규칙)을 확인해 주세요!");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "✈️ 축하 메시지 등록하기";
+      }
+    });
+
+    // 메시지 삭제하기 (본인 비밀번호 또는 마스터 비밀번호 '0327')
+    chatList.addEventListener("click", async (e) => {
+      const delBtn = e.target.closest(".gb-del-btn");
+      if (!delBtn) return;
+
+      const targetId = delBtn.getAttribute("data-id");
+      const targetPw = delBtn.getAttribute("data-pw");
+      const inputPw  = prompt("메시지 작성 시 입력한 비밀번호를 입력해 주세요.");
+
+      if (inputPw === null) return;
+      if (inputPw !== targetPw && inputPw !== MASTER_PW) {
+        return showToast("비밀번호가 일치하지 않습니다 😅");
+      }
+
+      try {
+        await fetch(`${FIREBASE_DB_URL}/guestbook/${targetId}.json`, {
+          method: "DELETE"
+        });
+        await loadMessages();
+        showToast("메시지가 삭제되었습니다.");
+      } catch (e) {
+        showToast("삭제 중 오류가 발생했습니다.");
+      }
+    });
+
+    // 초기 로드 및 4초마다 실시간 자동 동기화
+    loadMessages();
+    setInterval(loadMessages, 4000);
   })();
 </script>
 </body>
